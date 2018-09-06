@@ -1,0 +1,21 @@
+.btn-login {
+  background-color: #0ec5fd;
+  color: #f7f9fa;
+}
+
+.space-form {
+  margin-top: 20px;
+}
+
+.main {
+  display: inline;
+}
+
+.fully {
+  width: 100%;
+  height: auto;
+}
+
+.centered {
+  text-align: center;
+}
