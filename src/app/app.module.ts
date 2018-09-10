@@ -1,25 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { WallComponent } from './wall/wall.component';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule  } from 'angularfire2/auth';
+import { appRouting } from './app-routing.module';
+import { environment } from '../environments/environment';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    WallComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    appRouting,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+// faltaria archivo donde estan metodos de firebase
 export class AppModule { }
