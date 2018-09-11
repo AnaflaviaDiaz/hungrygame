@@ -9,14 +9,14 @@
     <form class="space-form">
       <div class="form-group">
         <label for="exampleInputEmail1">Correo Electrónico</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico">
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico" required>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña">
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Ingresa tu contraseña" required>
       </div>
       <div class="centered space-form">
-        <button type="button" class="btn btn-login" routerLink="/home">Iniciar Sesión</button>
+        <button type="button" class="btn btn-login" (click)="login()">Iniciar Sesión</button>
       </div>
       <div class="centered space-form space-vertical">
         <p>Inicia Sesión con: </p>

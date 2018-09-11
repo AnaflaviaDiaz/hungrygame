@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { SignupComponent } from './components/signup/signup.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 // faltaria archivo donde estan metodos de firebase
