@@ -31,4 +31,18 @@ export class LoginComponent implements OnInit {
     })
     .catch(error => console.log(error));
   }
+
+  facebookAccount() {
+    this._authService.facebookAccount()
+    .then(res => {
+      this._router.navigate(['/home']);
+    });
+  }
+
+  googleAccount() {
+    this._authService.googleAccount()
+    .then(res => {
+      this._router.navigate(['/home']);
+    });
+  }
 }
